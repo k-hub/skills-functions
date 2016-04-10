@@ -206,6 +206,12 @@ def cost_with_tax(state_abbrev, price, tax=0.05):
 # 	 job title defaults to "Engineer" if a job title is not passed in.
 #	 Return the person's title and name.
 
+def name_and_job(name, job="Engineer"):
+    """Print occupation and name."""
+
+    return job + " " + name
+
+
 # 3. Given a receiver's name, receiver's job title, and sender's name, print the following letter:      
 #       Dear JOB_TITLE RECEIVER_NAME, I think you are amazing! Sincerely,
 #       SENDER_NAME. 
