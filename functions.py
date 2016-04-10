@@ -57,8 +57,10 @@ def higher_or_lower(integer):
 
     if integer > 0:
         print "Higher than 0"
+
     elif integer < 0:
         print "Lower than 0"
+
     else:
         print "Zero"
 
@@ -80,6 +82,7 @@ def divisible_by_3(integer):
 
     if integer % 3 == 0:
         return True
+
     else:
         return False
 
@@ -116,8 +119,9 @@ def meal_cost_tip_calculator(price, tip=0.15):
 
     return total
 
-meal_cost_tip_calculator(price=15, tip=0.20)
-meal_cost_tip_calculator(price=15)
+# meal_cost_tip_calculator(price=15, tip=0.20)
+# meal_cost_tip_calculator(price=15)
+
 
 # 9. Write a function that takes an integer as an argument and
 #    returns two pieces of information as strings ---
@@ -128,6 +132,43 @@ meal_cost_tip_calculator(price=15)
 # 	on a number and unpack what is returned into two
 # 	variables --- sign and parity (whether it's positive
 # 	or negative). Print sign and parity.
+
+def num_info(integer):
+    """Get sign and parity of integer."""
+
+    pos = "Positive"
+    neg = "Negative"
+    even = "Even"
+    odd = "Odd"
+    sign_parity_list = []
+
+    if integer >= 0:
+        sign_parity_list.append(pos)
+
+    else:
+        sign_parity_list.append(neg)
+
+    if integer % 2 == 0 and integer != 0:
+        sign_parity_list.append(even)
+
+    elif integer % 2 != 0 and integer != 0:
+        sign_parity_list.append(odd)
+
+    else:
+        sign_parity_list.append("Neither 'even' or 'odd'")  # This condition is only true for integer 0.
+
+
+    sign, parity = sign_parity_list  # Unpack list onto two variables.
+
+    print sign, parity
+    return sign_parity_list
+
+
+num_info(2)
+num_info(3)
+num_info(-2)
+num_info(-3)
+num_info(0)
 
 
 ################################################################
