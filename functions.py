@@ -27,6 +27,12 @@ greet("Kathy")
 # 3. Write a function that takes two integers and multiplies
 #    them together. Print the result.
 
+def product(x, y):
+    """Get the product of two integers."""
+
+    print x * y
+
+product(x=2, y=3)
 
 # 4. Write a function that takes a string and an integer and
 #    prints the string that many times
