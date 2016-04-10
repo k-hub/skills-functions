@@ -206,17 +206,34 @@ def cost_with_tax(state_abbrev, price, tax=0.05):
 # 	 job title defaults to "Engineer" if a job title is not passed in.
 #	 Return the person's title and name.
 
-def name_and_job(name, job="Engineer"):
+def name_and_job(first_and_last_names, job="Engineer"):
     """Print occupation and name."""
 
-    return job + " " + name
+    return job + ' ' + first_and_last_names
 
 
-# 3. Given a receiver's name, receiver's job title, and sender's name, print the following letter:      
+# 3. Given a receiver's name, receiver's job title, and sender's name, print the following letter:   
 #       Dear JOB_TITLE RECEIVER_NAME, I think you are amazing! Sincerely,
 #       SENDER_NAME. 
 #    Use the function from #2 to construct the full title for the letter's greeting.
 
+def letter(receiver_first_and_last_names, sender, job="Engineer"):
+    """Print letter to job, receiver first and last name, from sender.
+
+    Calls name_and_job function and return value is split into a list to get 
+    job, first and last names. List is then unpacked and variables are used
+    to format letter.
+    """
+
+    receiver = name_and_job(receiver_first_and_last_names, job)  # Call function and bind return value to identifier.
+    receiver_list = receiver.split(' ')  # Split information from receiver to get a list.
+    job, first, last = receiver_list  # Unpack list to three variables: job, first, and last.
+
+    print "Dear {} {} {}, I think you are amazing! Sincerely, {}.".format(job, first, last, sender)
+
+
 # 4. Turn the block of code from the directions into a function. This
 #    function will take a number and append it to *numbers*. It doesn't
 #    need to return anything.
+
+
