@@ -164,11 +164,11 @@ def num_info(integer):
     return sign_parity_list
 
 
-num_info(2)
-num_info(3)
-num_info(-2)
-num_info(-3)
-num_info(0)
+# num_info(2)
+# num_info(3)
+# num_info(-2)
+# num_info(-3)
+# num_info(0)
 
 
 ################################################################
@@ -181,9 +181,25 @@ num_info(0)
 #
 #    Turn this into a function. Your function will pass in
 #    the default tax amount (5%), a state abbreviaton, and the
-#    default tax amount as parameters.
+#    price as parameters.
 #    If the state is California, apply a 7% tax within the function.
 #    Your function should return the total cost of the item including tax.
+
+def cost_with_tax(state_abbrev, price, tax=0.05):
+    """Get total cost including tax.
+
+    Total cost is price + price * tax. Tax for any state is 5%, except for 'CA',
+    where tax is 7%.
+    """
+    price = float(price)
+
+    if state_abbrev == 'CA':
+        tax = 0.07
+
+    total = price + price * tax
+
+    return total
+
 
 # 2. Turn the block of code from the directions into a function.
 #	 Take a name and a job title as parameters, making it so the
