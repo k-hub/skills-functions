@@ -64,6 +64,14 @@ higher_or_lower(-1)
 #    boolean (True or False), depending on whether the number
 #    is evenly divisible by 3.
 
+def divisible_by_3(integer):
+    if integer % 3 == 0:
+        return True
+    else:
+        return False
+
+divisible_by_3(2)
+divisible_by_3(3)
 
 # 7. Write a function that takes a sentence as one string and
 #    returns the number of spaces.
