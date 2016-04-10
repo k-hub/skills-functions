@@ -8,7 +8,7 @@
 #    prints "Hello World".
 
 def print_hello_world():
-    """Print Hello World"""
+    """Print Hello World."""
 
     print "Hello World"
 
@@ -22,12 +22,11 @@ def greet(name):
 
     print "Hi", name
 
-greet('Kathy')
+greet("Kathy")
 
 # 3. Write a function that takes two integers and multiplies
 #    them together. Print the result.
 
-def multiplies():
 
 # 4. Write a function that takes a string and an integer and
 #    prints the string that many times
