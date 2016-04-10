@@ -12,7 +12,8 @@ def print_hello_world():
 
     print "Hello World"
 
-print_hello_world()
+# print_hello_world()
+
 
 # 2. Write a function that takes a name as a string and
 #    prints "Hi" followed by the name.
@@ -22,7 +23,8 @@ def greet(name):
 
     print "Hi", name
 
-greet("Kathy")
+# greet("Kathy")
+
 
 # 3. Write a function that takes two integers and multiplies
 #    them together. Print the result.
@@ -32,7 +34,8 @@ def product(x, y):
 
     print x * y
 
-product(x=2, y=3)
+# product(x=2, y=3)
+
 
 # 4. Write a function that takes a string and an integer and
 #    prints the string that many times
@@ -42,13 +45,16 @@ def string_repeat(string, integer):
 
     print string * integer
 
-string_repeat(string="Hello", integer=5)
+# string_repeat(string="Hello", integer=5)
+
 
 # 5. Write a function that takes an integer and prints "Higher
 #    than 0" if higher than zero and "Lower than 0" if lower
 #    than zero. If integer is 0 print "Zero".
 
 def higher_or_lower(integer):
+    """Print if integer >, <, or = to zero."""
+
     if integer > 0:
         print "Higher than 0"
     elif integer < 0:
@@ -56,25 +62,41 @@ def higher_or_lower(integer):
     else:
         print "Zero"
 
-higher_or_lower(0)
-higher_or_lower(1)
-higher_or_lower(-1)
+# higher_or_lower(0)
+# higher_or_lower(1)
+# higher_or_lower(-1)
+
 
 # 6. Write a function that takes an integer and returns a
 #    boolean (True or False), depending on whether the number
 #    is evenly divisible by 3.
 
 def divisible_by_3(integer):
+    """Return True or False if integer is evenly divisible by 3.
+
+    Integer is evenly divisible by 3 if integer % 3 has a remainder of 0.
+    Otherwise, it is not divisible by 3.
+    """
+
     if integer % 3 == 0:
         return True
     else:
         return False
 
-divisible_by_3(2)
-divisible_by_3(3)
+# divisible_by_3(2)
+# divisible_by_3(3)
+
 
 # 7. Write a function that takes a sentence as one string and
 #    returns the number of spaces.
+
+def num_spaces(string):
+    """Returns number of spaces in string."""
+
+    return string.count(' ')
+
+# num_spaces("food")
+# num_spaces("I love to eat food.")
 
 
 # 8. Write a function that can be passed a meal price and a
