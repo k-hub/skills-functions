@@ -105,6 +105,19 @@ def num_spaces(string):
 #    percentage should be optional; if not given, it should
 #    default to 15%.
 
+def meal_cost_tip_calculator(price, tip=0.15):
+    """Get total meal cost with tip.
+
+    Total meal cost is price of meal + price of meal * tip. If no
+    tip is passed, default tip is 15%.
+    """
+
+    total = price + (price * tip)
+
+    return total
+
+meal_cost_tip_calculator(price=15, tip=0.20)
+meal_cost_tip_calculator(price=15)
 
 # 9. Write a function that takes an integer as an argument and
 #    returns two pieces of information as strings ---
