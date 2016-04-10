@@ -48,6 +48,17 @@ string_repeat(string="Hello", integer=5)
 #    than 0" if higher than zero and "Lower than 0" if lower
 #    than zero. If integer is 0 print "Zero".
 
+def higher_or_lower(integer):
+    if integer > 0:
+        print "Higher than 0"
+    elif integer < 0:
+        print "Lower than 0"
+    else:
+        print "Zero"
+
+higher_or_lower(0)
+higher_or_lower(1)
+higher_or_lower(-1)
 
 # 6. Write a function that takes an integer and returns a
 #    boolean (True or False), depending on whether the number
