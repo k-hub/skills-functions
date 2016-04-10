@@ -37,6 +37,12 @@ product(x=2, y=3)
 # 4. Write a function that takes a string and an integer and
 #    prints the string that many times
 
+def string_repeat(string, integer):
+    """Print string n times."""
+
+    print string * integer
+
+string_repeat(string="Hello", integer=5)
 
 # 5. Write a function that takes an integer and prints "Higher
 #    than 0" if higher than zero and "Lower than 0" if lower
