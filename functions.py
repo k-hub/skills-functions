@@ -164,11 +164,11 @@ def num_info(integer):
     return sign_parity_list
 
 
-# num_info(2)
-# num_info(3)
-# num_info(-2)
-# num_info(-3)
-# num_info(0)
+num_info(2)
+num_info(3)
+num_info(-2)
+num_info(-3)
+num_info(0)
 
 
 ################################################################
@@ -185,7 +185,7 @@ def num_info(integer):
 #    If the state is California, apply a 7% tax within the function.
 #    Your function should return the total cost of the item including tax.
 
-def cost_with_tax(state_abbrev, price, tax=0.05):
+def cost_with_tax(state, price, tax=0.05):
     """Get total cost including tax.
 
     Total cost is price + price * tax. Tax for any state is 5%, except for 'CA',
@@ -193,7 +193,7 @@ def cost_with_tax(state_abbrev, price, tax=0.05):
     """
     price = float(price)
 
-    if state_abbrev == 'CA':
+    if state == 'CA':
         tax = 0.07
 
     total = price + price * tax
@@ -206,10 +206,10 @@ def cost_with_tax(state_abbrev, price, tax=0.05):
 # 	 job title defaults to "Engineer" if a job title is not passed in.
 #	 Return the person's title and name.
 
-def name_and_job(first_and_last_names, job="Engineer"):
+def name_and_job(name, title="Engineer"):
     """Print occupation and name."""
 
-    return job + ' ' + first_and_last_names
+    return title + ' ' + name
 
 
 # 3. Given a receiver's name, receiver's job title, and sender's name, print the following letter:   
@@ -217,7 +217,7 @@ def name_and_job(first_and_last_names, job="Engineer"):
 #       SENDER_NAME. 
 #    Use the function from #2 to construct the full title for the letter's greeting.
 
-def letter(receiver_first_and_last_names, sender, job="Engineer"):
+def letter(receiver_first_and_last_names, sender_name, job="Engineer"):
     """Print letter to job, receiver first and last name, from sender.
 
     Calls name_and_job function and return value is split into a list to get 
@@ -227,13 +227,21 @@ def letter(receiver_first_and_last_names, sender, job="Engineer"):
 
     receiver = name_and_job(receiver_first_and_last_names, job)  # Call function and bind return value to identifier.
     receiver_list = receiver.split(' ')  # Split information from receiver to get a list.
-    job, first, last = receiver_list  # Unpack list to three variables: job, first, and last.
+    job_title, first, last = receiver_list  # Unpack list to three variables: job, first, and last.
+    receiver_name = first + ' ' + last
 
-    print "Dear {} {} {}, I think you are amazing! Sincerely, {}.".format(job, first, last, sender)
+    print "Dear {} {}, I think you are amazing! Sincerely, {}.".format(job_title, receiver_name, sender_name)
 
 
 # 4. Turn the block of code from the directions into a function. This
 #    function will take a number and append it to *numbers*. It doesn't
 #    need to return anything.
 
+def append_nums(num):
+    """Append num to numbers list."""
+
+    numbers = []
+    numbers.append(num)
+
+    print numbers
 
