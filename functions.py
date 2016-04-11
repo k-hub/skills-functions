@@ -201,6 +201,10 @@ def cost_with_tax(state, price, tax=0.05):
     return total
 
 
+# cost_with_tax('CA', 5.00)
+# cost_with_tax('NY', 5.00)
+
+
 # 2. Turn the block of code from the directions into a function.
 #	 Take a name and a job title as parameters, making it so the
 # 	 job title defaults to "Engineer" if a job title is not passed in.
@@ -210,6 +214,10 @@ def name_and_job(name, title="Engineer"):
     """Print occupation and name."""
 
     return title + ' ' + name
+
+
+# name_and_job(name="Jane Hacker")
+# name_and_job(name="Jane Hacker", title="Student")
 
 
 # 3. Given a receiver's name, receiver's job title, and sender's name, print the following letter:   
@@ -233,6 +241,10 @@ def letter(receiver_first_and_last_names, sender_name, job="Engineer"):
     print "Dear {} {}, I think you are amazing! Sincerely, {}.".format(job_title, receiver_name, sender_name)
 
 
+# letter(receiver_first_and_last_names="Jane Hacker", sender_name="Sarah Developer")
+# letter(receiver_first_and_last_names="Jane Hacker", sender_name="Sarah Developer", job="Student")
+
+
 # 4. Turn the block of code from the directions into a function. This
 #    function will take a number and append it to *numbers*. It doesn't
 #    need to return anything.
@@ -244,4 +256,7 @@ def append_nums(num):
     numbers.append(num)
 
     print numbers
+
+
+# append_nums(4)
 
